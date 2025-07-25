@@ -1,7 +1,3 @@
-# OllamaVisionKit
-
-### 【中文版】README.md
-
 # OllamaVisionKit for ComfyUI
 
 一个功能强大的ComfyUI节点套件，专为使用本地Ollama视觉模型进行高级图像解析和自动化批量打标而设计。本工具包将彻底改变您的ComfyUI工作流，将数小时的手动数据准备工作转变为精简、一键式的自动化流程。

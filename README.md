@@ -36,6 +36,9 @@ git clone https://github.com/chinggirltube/OllamaVisionKit.git
 3.  重启ComfyUI。您现在应该可以在 `Ollama` 分类下找到新的节点。
 
 
+![image](https://raw.githubusercontent.com/chinggirltube/OllamaVisionKit/refs/heads/main/workflows.jpg)
+
+
 ## 📖 节点说明
 
 ### 🧠 Ollama Advanced Configurator（高级配置生成器）

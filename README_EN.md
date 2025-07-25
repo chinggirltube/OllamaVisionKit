@@ -26,9 +26,9 @@ Before you begin, please ensure you have the following set up:
 Once you have met the prerequisites:
 
 1.  Clone this repository into your `ComfyUI/custom_nodes/` directory:
-    ```bash
-    git clone https://github.com/YourUsername/OllamaVisionKit.git
-    ```
+```
+git clone https://github.com/chinggirltube/OllamaVisionKit.git
+```
     
 2.  Alternatively, you can download the `__init__.py` file and place it inside a new folder named `OllamaVisionKit` within `ComfyUI/custom_nodes/`.
 

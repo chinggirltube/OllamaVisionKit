@@ -1,0 +1,506 @@
+{
+  "id": "20b1b4e9-65f4-4b38-84fe-85e3828e5626",
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 13,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "OllamaInterrogator",
+      "pos": [
+        681.2227172851562,
+        810.5704956054688
+      ],
+      "size": [
+        285.7299499511719,
+        104.0697250366211
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "label": "instruction",
+          "name": "instruction",
+          "type": "STRING",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "label": "caption",
+          "name": "caption",
+          "type": "STRING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaInterrogator"
+      },
+      "widgets_values": [
+        "qwen2.5vl:7b",
+        "http://127.0.0.1:11434/api/generate"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 2,
+      "type": "OllamaContentOptions",
+      "pos": [
+        375.99993896484375,
+        658.091552734375
+      ],
+      "size": [
+        274.03515625,
+        274
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "OLLAMA_CONTENT_OPTIONS",
+          "name": "OLLAMA_CONTENT_OPTIONS",
+          "type": "OLLAMA_CONTENT_OPTIONS",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaContentOptions"
+      },
+      "widgets_values": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 1,
+      "type": "OllamaAdvancedConfigurator",
+      "pos": [
+        676.6666870117188,
+        653.3334350585938
+      ],
+      "size": [
+        291.3335876464844,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "content_options",
+          "name": "content_options",
+          "shape": 7,
+          "type": "OLLAMA_CONTENT_OPTIONS",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "label": "instruction",
+          "name": "instruction",
+          "type": "STRING",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaAdvancedConfigurator"
+      },
+      "widgets_values": [
+        true,
+        "Natural Language Paragraph",
+        "Detailed"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 7,
+      "type": "PreviewTextNode",
+      "pos": [
+        649.7630004882812,
+        976.9774780273438
+      ],
+      "size": [
+        343.2911682128906,
+        213.01219177246094
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "文本",
+          "name": "text",
+          "type": "STRING",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_custom_nodes_alekpet",
+        "ver": "fbce57d86acc3ae365312a3f43e558944446db1c",
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "The image showcases a black lace bodysuit with intricate floral patterns and a structured, corset-like design. The bodysuit features thin, adjustable straps and a low-cut neckline with a central bow detail. The fabric is sheer, allowing a glimpse of the wearer's skin, and the bodysuit is accentuated with a subtle, embroidered floral pattern at the bottom. The overall style is elegant and sophisticated, with a focus on delicate lace and intricate detailing. The background is plain white, emphasizing the garment's design and craftsmanship. The lighting is soft and even, highlighting the texture and patterns of the lace. The composition is centered, drawing attention to the bodysuit's form-fitting silhouette and intricate design.",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 6,
+      "type": "LoadImage",
+      "pos": [
+        1021.9017333984375,
+        653.6843872070312
+      ],
+      "size": [
+        371.41717529296875,
+        536.703857421875
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "图像",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "label": "遮罩",
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.45",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "00003-0-41fb9ad767565193511e44b050eaea77.png",
+        "image"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 8,
+      "type": "OllamaBatchTagger",
+      "pos": [
+        1818.644287109375,
+        889.3097534179688
+      ],
+      "size": [
+        297.4010925292969,
+        205.66671752929688
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "instruction",
+          "name": "instruction",
+          "type": "STRING",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "label": "status",
+          "name": "status",
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaBatchTagger"
+      },
+      "widgets_values": [
+        "C:\\ComfyUI\\input",
+        "C:\\ComfyUI\\output\\captions",
+        "my_trigger_word",
+        "qwen2.5vl:7b",
+        "http://127.0.0.1:11434/api/generate",
+        true,
+        4
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 10,
+      "type": "OllamaAdvancedConfigurator",
+      "pos": [
+        1817.9119873046875,
+        711.8431396484375
+      ],
+      "size": [
+        291.3335876464844,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "content_options",
+          "name": "content_options",
+          "shape": 7,
+          "type": "OLLAMA_CONTENT_OPTIONS",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "label": "instruction",
+          "name": "instruction",
+          "type": "STRING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaAdvancedConfigurator"
+      },
+      "widgets_values": [
+        true,
+        "Natural Language Paragraph",
+        "Concise"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 9,
+      "type": "OllamaContentOptions",
+      "pos": [
+        1503.953857421875,
+        754.5222778320312
+      ],
+      "size": [
+        274.03515625,
+        274
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "label": "OLLAMA_CONTENT_OPTIONS",
+          "name": "OLLAMA_CONTENT_OPTIONS",
+          "type": "OLLAMA_CONTENT_OPTIONS",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaContentOptions"
+      },
+      "widgets_values": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 11,
+      "type": "PreviewTextNode",
+      "pos": [
+        2152.978515625,
+        797.588623046875
+      ],
+      "size": [
+        342.7332763671875,
+        159.13336181640625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "文本",
+          "name": "text",
+          "type": "STRING",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_custom_nodes_alekpet",
+        "ver": "fbce57d86acc3ae365312a3f43e558944446db1c",
+        "Node name for S&R": "PreviewTextNode"
+      },
+      "widgets_values": [
+        "",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "OLLAMA_CONTENT_OPTIONS"
+    ],
+    [
+      3,
+      6,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      5,
+      0,
+      7,
+      0,
+      "STRING"
+    ],
+    [
+      10,
+      1,
+      0,
+      5,
+      1,
+      "STRING"
+    ],
+    [
+      11,
+      9,
+      0,
+      10,
+      0,
+      "OLLAMA_CONTENT_OPTIONS"
+    ],
+    [
+      12,
+      10,
+      0,
+      8,
+      0,
+      "STRING"
+    ],
+    [
+      13,
+      8,
+      0,
+      11,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Group",
+      "bounding": [
+        365.99993896484375,
+        579.7334594726562,
+        1037.31884765625,
+        620.6547241210938
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Group",
+      "bounding": [
+        1457.5899658203125,
+        580.0614013671875,
+        1121.45458984375,
+        611.581787109375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7513148009015777,
+      "offset": [
+        22.328476189471036,
+        -7.360569866063429
+      ]
+    },
+    "frontendVersion": "1.23.4"
+  },
+  "version": 0.4
+}

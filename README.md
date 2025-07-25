@@ -32,7 +32,7 @@
 
 1.  将本仓库克隆到您的 `ComfyUI/custom_nodes/` 目录下：
     ```bash
-    git clone https://github.com/YourUsername/OllamaVisionKit.git
+git clone https://github.com/chinggirltube/OllamaVisionKit.git
     ```
     
 2.  或者，您也可以下载 `__init__.py` 文件，并将其放入 `ComfyUI/custom_nodes/` 目录下一个名为 `OllamaVisionKit` 的新文件夹中。
